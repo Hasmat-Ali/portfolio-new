@@ -50,11 +50,14 @@ app.use((err, req, res, next) => {
 });
 
 // ─── Start ───────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🚀 Portfolio Drive Server running at http://localhost:${PORT}`);
-  console.log(`\n📋 Setup steps:`);
-  console.log(`   1. Fill in .env with your Google Cloud credentials`);
-  console.log(`   2. Visit http://localhost:${PORT}/auth/login to authenticate`);
-  console.log(`   3. Copy GOOGLE_REFRESH_TOKEN from console into .env`);
-  console.log(`   4. Restart server — you're ready!\n`);
-});
+// app.listen(PORT, () => {
+//   console.log(`\n🚀 Portfolio Drive Server running at http://localhost:${PORT}`);
+//   console.log(`\n📋 Setup steps:`);
+//   console.log(`   1. Fill in .env with your Google Cloud credentials`);
+//   console.log(`   2. Visit http://localhost:${PORT}/auth/login to authenticate`);
+//   console.log(`   3. Copy GOOGLE_REFRESH_TOKEN from console into .env`);
+//   console.log(`   4. Restart server — you're ready!\n`);
+// });
+
+app.listen(5000, '0.0.0.0', () => console.log('Server running'));
+

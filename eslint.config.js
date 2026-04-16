@@ -7,7 +7,20 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 export default defineConfig([
   globalIgnores(['dist']),
   {
+    files: ['server/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.node,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'commonjs',
+      },
+    },
+  },
+  {
     files: ['**/*.{js,jsx}'],
+    ignores: ['server/**'],
+    
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
