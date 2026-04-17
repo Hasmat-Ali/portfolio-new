@@ -12,7 +12,7 @@ export const personalInfo = {
   avatar: "/src/assets/photo.png",
   heroImage: "/src/assets/photo.png",
   aboutImage: "/src/assets/photo.png",
-  bio: "Experienced Front-End Developer with 10+ years of expertise in ReactJS, TypeScript, JavaScript (ES6), Redux, Angular, and responsive UI frameworks. Skilled in building scalable, high-performance applications across Manufacturing, Healthcare, Oil & Gas, and Engineered Materials domains.",
+  bio: "Experienced Front-End Developer with 10+ years of expertise in ReactJS, Angular, Node JS, TypeScript, JavaScript (ES6), Redux, NGRX, RxJS and responsive UI frameworks. Skilled in building scalable, high-performance applications across Manufacturing, Healthcare, Oil & Gas, and Engineered Materials domains.",
   yearsExp: "10+",
   projectsDone: "20+",
   happyClients: "10+",
