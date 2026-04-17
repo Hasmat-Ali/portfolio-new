@@ -8,7 +8,7 @@ export const personalInfo = {
   github: "https://github.com/hasmatali",
   linkedin: "https://linkedin.com/in/hasmatali",
   twitter: "https://twitter.com/hasmatali",
-  resumeUrl: "http://localhost:5000/drive/download/1fvDEn-dhQ_EmYSLoOIqRXcaZIrgURDRL",
+  resumeUrl: "/Hasmat_Ali_Resume.docx",
   avatar: "/src/assets/photo.png",
   heroImage: "/src/assets/photo.png",
   aboutImage: "/src/assets/photo.png",

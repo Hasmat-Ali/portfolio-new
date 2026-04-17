@@ -70,8 +70,7 @@ export default function Hero() {
               </button>
               <a
                 href={personalInfo.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Hasmat_Ali_Resume.docx"
                 className="flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 hover:border-violet-500/50 text-white font-semibold transition-all duration-200 hover:bg-white/5 hover:-translate-y-0.5"
               >
                 <Download size={16} /> Download CV
