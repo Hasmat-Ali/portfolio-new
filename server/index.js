@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  methods: ['GET', 'POST', 'DELETE'],
+  methods: ['GET'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
@@ -31,10 +31,7 @@ app.get('/', (req, res) => {
         status: 'GET /auth/status — Check auth status',
       },
       drive: {
-        upload: 'POST /drive/upload — Upload resume (multipart, field: resume)',
-        files: 'GET /drive/files — List all files in Drive folder',
-        download: 'GET /drive/download/:fileId — Download file by ID',
-        delete: 'DELETE /drive/delete/:fileId — Delete file by ID',
+        download: 'GET /drive/download/:fileId — Download resume by file ID',
       },
     },
   });
@@ -50,14 +47,13 @@ app.use((err, req, res, next) => {
 });
 
 // ─── Start ───────────────────────────────────────────────────────────────────
-// app.listen(PORT, () => {
-//   console.log(`\n🚀 Portfolio Drive Server running at http://localhost:${PORT}`);
-//   console.log(`\n📋 Setup steps:`);
-//   console.log(`   1. Fill in .env with your Google Cloud credentials`);
-//   console.log(`   2. Visit http://localhost:${PORT}/auth/login to authenticate`);
-//   console.log(`   3. Copy GOOGLE_REFRESH_TOKEN from console into .env`);
-//   console.log(`   4. Restart server — you're ready!\n`);
-// });
+app.listen(PORT, () => {
+  console.log(`\n🚀 Portfolio Drive Server running at http://localhost:${PORT}`);
+  console.log(`\n📋 Setup steps:`);
+  console.log(`   1. Fill in .env with your Google Cloud credentials`);
+  console.log(`   2. Visit http://localhost:${PORT}/auth/login to authenticate`);
+  console.log(`   3. Copy GOOGLE_REFRESH_TOKEN from console into .env`);
+  console.log(`   4. Restart server — you're ready!\n`);
+});
 
-app.listen(5000, '0.0.0.0', () => console.log('Server running'));
 
